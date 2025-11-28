@@ -5,17 +5,40 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="#ff6b35" />
+    <meta name="description" content="Create and customize your perfect meal with our interactive food builder. Choose ingredients, customize recipes, and order your personalized dishes." />
+    <meta name="keywords" content="custom food, food builder, meal customization, restaurant, online ordering" />
+    <meta name="author" content="Custom Food Builder" />
+    
+    <!-- Open Graph meta tags for social sharing -->
+    <meta property="og:title" content="Custom Food Builder - Create Your Perfect Meal" />
+    <meta property="og:description" content="Design and order personalized dishes with our interactive food customization platform." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/og-image.jpg" />
+    
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Custom Food Builder" />
+    <meta name="twitter:description" content="Create and customize your perfect meal" />
+    
     <link rel="manifest" href="/manifest.webmanifest" />
     <link rel="apple-touch-icon" href="/icons/icon-192.png" />
-    <title>Custom Food Builder</title>
+    <title>Custom Food Builder - Create Your Perfect Meal</title>
+    
+    <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Load fonts with display=swap for better performance -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Preload critical resources -->
+    <link rel="modulepreload" href="/src/main.jsx" />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
     <script>
+      // Service Worker registration
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
           navigator.serviceWorker.register('/sw.js').catch(() => {});
